@@ -1,0 +1,33 @@
+package com.example.onlineshop.controller;
+
+import com.example.onlineshop.model.Product;
+import com.example.onlineshop.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ProductController {
+
+@Controller
+public class Electroontroller {
+
+@Controller 
+public class EconomyController {
+
+    @Autowired
+    private ProductService productService;
+
+@Autowired
+private ElectroService ElectroService;
+
+@Autowored
+private EconomyService EconomyService ;
+
+    @GetMapping("/")
+    public String index(Model model) {
+        model.addAttribute("products", productService.findAll());
+        return "index";
+    }
+}
